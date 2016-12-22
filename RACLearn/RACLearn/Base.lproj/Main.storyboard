@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMe-KW-90D">
+                                <state key="normal" title="跳转第二个控制器"/>
+                                <connections>
+                                    <action selector="gotoTowVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TC2-ky-9gj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6d-c7-wQt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nzN-hE-O8S">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="登录" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-Nl-y6O">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qke-Pc-MJY">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUn-b5-Afw">
+                                <state key="normal" title="登录"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qke-Pc-MJY" firstAttribute="top" secondItem="Jg5-Nl-y6O" secondAttribute="bottom" constant="20" id="11f-yd-p0L"/>
+                            <constraint firstItem="qke-Pc-MJY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="78Y-yR-5lE"/>
+                            <constraint firstItem="Q6d-c7-wQt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Dx-W9-d6M"/>
+                            <constraint firstAttribute="trailing" secondItem="nzN-hE-O8S" secondAttribute="trailing" constant="20" id="Ef8-H4-Ndb"/>
+                            <constraint firstItem="aMe-KW-90D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GSe-ij-Nfc"/>
+                            <constraint firstItem="Jg5-Nl-y6O" firstAttribute="top" secondItem="aMe-KW-90D" secondAttribute="bottom" constant="20" id="Her-Be-npr"/>
+                            <constraint firstItem="nzN-hE-O8S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="L3q-1W-ddT"/>
+                            <constraint firstItem="JUn-b5-Afw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Q1U-pJ-O4D"/>
+                            <constraint firstAttribute="trailing" secondItem="JUn-b5-Afw" secondAttribute="trailing" constant="20" id="UNx-gB-leU"/>
+                            <constraint firstAttribute="trailing" secondItem="Jg5-Nl-y6O" secondAttribute="trailing" constant="20" id="Z12-Az-4Kd"/>
+                            <constraint firstItem="Q6d-c7-wQt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Z65-I8-r6y"/>
+                            <constraint firstItem="Jg5-Nl-y6O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="alg-Cr-9cr"/>
+                            <constraint firstItem="nzN-hE-O8S" firstAttribute="top" secondItem="Q6d-c7-wQt" secondAttribute="bottom" constant="20" id="cSt-gK-tzl"/>
+                            <constraint firstAttribute="trailing" secondItem="qke-Pc-MJY" secondAttribute="trailing" constant="20" id="foi-4z-ffF"/>
+                            <constraint firstItem="JUn-b5-Afw" firstAttribute="top" secondItem="qke-Pc-MJY" secondAttribute="bottom" constant="20" id="gtT-84-B5V"/>
+                            <constraint firstItem="aMe-KW-90D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k3Z-Re-mfB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Q6d-c7-wQt" id="Wdj-Z6-DCt"/>
+                        <outlet property="loginBTN" destination="JUn-b5-Afw" id="jeS-iA-vEJ"/>
+                        <outlet property="loginTF" destination="Jg5-Nl-y6O" id="3Kj-GI-qkV"/>
+                        <outlet property="pswTF" destination="qke-Pc-MJY" id="MHK-vO-GdV"/>
+                        <outlet property="textField" destination="nzN-hE-O8S" id="JxK-hN-3oX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Tow View Controller-->
+        <scene sceneID="6Yz-eM-Xft">
+            <objects>
+                <viewController storyboardIdentifier="TowViewController" id="fvD-cR-0sA" customClass="TowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YgU-z6-jj8"/>
+                        <viewControllerLayoutGuide type="bottom" id="gnI-Bs-67A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IyD-u7-9fk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnm-ds-mQ8">
+                                <state key="normal" title="通知按钮"/>
+                                <connections>
+                                    <action selector="noticeClick:" destination="fvD-cR-0sA" eventType="touchUpInside" id="Z6E-3L-N7D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qnm-ds-mQ8" firstAttribute="centerY" secondItem="IyD-u7-9fk" secondAttribute="centerY" id="2pM-Z0-FKe"/>
+                            <constraint firstItem="Qnm-ds-mQ8" firstAttribute="centerX" secondItem="IyD-u7-9fk" secondAttribute="centerX" id="l82-4p-Ghv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vva-4c-OPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="35"/>
+        </scene>
+    </scenes>
+</document>
