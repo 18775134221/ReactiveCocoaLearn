@@ -271,7 +271,7 @@
 				TargetAttributes = {
 					3147FE4D1DC07F6A002DE4FA = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = W6VZRT92AU;
+						DevelopmentTeam = 9Z4ZJ5K368;
 						ProvisioningStyle = Automatic;
 					};
 					3147FE661DC07F6A002DE4FA = {
@@ -633,8 +633,9 @@
 			baseConfigurationReference = A075BFBFD3EDA49AE416597D /* Pods-RACLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W6VZRT92AU;
+				DEVELOPMENT_TEAM = 9Z4ZJ5K368;
 				INFOPLIST_FILE = RACLearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qinfensky.RACLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -646,8 +647,9 @@
 			baseConfigurationReference = 9295DC63B7E675F5F060071C /* Pods-RACLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W6VZRT92AU;
+				DEVELOPMENT_TEAM = 9Z4ZJ5K368;
 				INFOPLIST_FILE = RACLearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qinfensky.RACLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";

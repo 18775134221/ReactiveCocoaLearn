@@ -28,28 +28,39 @@
 @implementation ViewController
 @synthesize command;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self bindMD];
-}
-
-- (void)bindMD {
-    
-    RAC(self.loginVM.account, account) = self.loginTF.rac_textSignal;
-    RAC(self.loginVM.account, psw) = self.pswTF.rac_textSignal;
-    RAC(self.loginBTN, enabled) = self.loginVM.loginEnableSignal;
-    [[self.loginBTN rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [self.loginVM.loginCommand execute:nil];
-    }];
-    
-}
-
+#pragma mark: - getter and setter
 - (LoginVM *)loginVM {
     if (!_loginVM) {
         _loginVM = [[LoginVM alloc] init];
     }
     return _loginVM;
 }
+
+#pragma mark: - lift Cycle
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self bindMD];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark: - private Methods
+- (void)bindMD {
+    
+    RAC(self.loginVM.account, account) = self.loginTF.rac_textSignal;
+    RAC(self.loginVM.account, psw) = self.pswTF.rac_textSignal;
+    RAC(self.loginBTN, enabled) = self.loginVM.loginEnableSignal;
+    @weakify(self);
+    [[self.loginBTN rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.loginVM.loginCommand execute:nil];
+    }];
+    
+}
+
 
 - (void)test {
     //    [self siganlTest];
@@ -639,10 +650,6 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
