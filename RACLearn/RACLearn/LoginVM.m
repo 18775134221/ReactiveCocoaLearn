@@ -18,13 +18,7 @@
     return self;
 }
 
-- (Account *)account {
-    if (!_account) {
-        _account = [[Account alloc] init];
-    }
-    return _account;
-}
-
+#pragma mark: - private Methods
 - (void)initBind {
     
     // 按钮点击状态是否能点击
@@ -34,17 +28,6 @@
     
     
     // 按钮事件
-    self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        NSLog(@"按钮点击");
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [subscriber sendNext:@"登录完毕"];
-                [subscriber sendCompleted];
-            });
-            return nil;
-        }];
-    }];
-    
     [self.loginCommand.executionSignals.switchToLatest subscribeNext:^(NSString *x) {
         if ([x isEqualToString:@"登录完毕"]) {
             
@@ -62,6 +45,30 @@
         }
         
     }];
+}
+
+#pragma mark: - getter and setter
+- (RACCommand *)loginCommand {
+    if (! _loginCommand) {
+        _loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            NSLog(@"按钮点击");
+            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [subscriber sendNext:@"登录完毕"];
+                    [subscriber sendCompleted];
+                });
+                return nil;
+            }];
+        }];
+    }
+    return _loginCommand;
+}
+
+- (Account *)account {
+    if (!_account) {
+        _account = [[Account alloc] init];
+    }
+    return _account;
 }
 
 

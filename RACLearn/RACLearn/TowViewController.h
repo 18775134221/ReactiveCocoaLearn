@@ -12,6 +12,7 @@
 @interface TowViewController : UIViewController
 
 @property (nonatomic, strong) RACSubject *delegateSignal;
+
 - (IBAction)noticeClick:(id)sender;
 
 @end
